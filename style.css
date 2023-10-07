@@ -12,7 +12,7 @@ body {
   height: 100vh;
 }
 
-.crud {
+.crud-operation-school-system {
   width: 80%;
   margin: auto;
   text-align: center;
@@ -21,6 +21,7 @@ body {
 
   /* text-transform: uppercase; */
   /* height: 100vh; */
+  background-color: black;
 }
 
 input {
@@ -110,7 +111,7 @@ th {
   gap: 15px;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 820px) {
   input {
     display: flex;
   }
@@ -118,13 +119,43 @@ th {
   td {
     display: flex;
     /* flex-direction: column; */
+    justify-content: center;
   }
   #card {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    background-color: greenyellow;
+    background-color: black;
     margin: 10px;
+    /* border: 2px solid red; */
+  }
+  #card div {
+    border: 2px solid red;
+    width: 100%;
+    padding: 5px;
+    color: red;
+  }
+
+  #card > div:nth-last-of-type(odd) {
+    color: red;
+
+    border-radius: 20px;
+  }
+
+  #card > div:nth-last-of-type(even) {
+    color: red;
+
+    border-radius: 20px;
+  }
+
+  #card > div > div {
+    color: red;
+    border: none;
+    border-bottom: 2px solid red;
+  }
+  #card > div > div:last-child {
+    color: red;
+    border: none;
   }
 }

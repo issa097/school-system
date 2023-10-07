@@ -5,12 +5,13 @@ let phone = document.getElementById("phone number");
 let grade = document.getElementById("grade");
 let major = document.getElementById("major");
 let img = document.getElementById("img");
-let imgs = "admin-png-12.png";
+let imgs = "/image/admin-png-12.png";
 let body = document.getElementById("jk");
 let card = document.getElementById("card");
-// let img = URL("/admin-png-12.png");
-
 let submitt = document.getElementById("submit");
+
+// constuctor
+
 class studant {
   constructor(imgs, name, date, gender, phone, grade, major) {
     this.imgs = imgs;
@@ -28,6 +29,8 @@ class studant {
     localStorage.setItem("product", JSON.stringify(kkl));
   }
 }
+
+// table
 
 let temp = "";
 let mood = "create";
@@ -49,6 +52,8 @@ submitt.onclick = function () {
     grade: grade.value,
     major: major.value,
   };
+
+  // construtor
 
   let ll = new studant(
     datapro.imgs,
@@ -72,11 +77,13 @@ submitt.onclick = function () {
   let continer = document.createElement("div");
   let cards = document.getElementById("card");
 
-  let imgss = document.createElement("div");
+  let imgss = document.createElement("img");
   imgss.src = imgs;
   continer.appendChild(imgss);
   cards.appendChild(continer);
 
+  imgss.style.width = "100px";
+  imgss.style.height = "100px";
   let majors = document.createElement("div");
   majors.innerHTML = datapro.major;
   continer.appendChild(majors);
@@ -91,15 +98,6 @@ submitt.onclick = function () {
   dates.innerHTML = datapro.date;
   continer.appendChild(dates);
   cards.appendChild(continer);
-
-  // card.style.display = "flex";
-  // card.style.justifyContent = "space-between";
-  // continer.style.flexwrap = "wrap";
-  continer.style.background = "red";
-  // continer.style.width = "25%";
-  // continer.style.height = "100%";
-  // card.style.justifyContent = "center";
-  // card.style.gap = "25%";
 
   let genders = document.createElement("div");
   genders.innerHTML = datapro.gender;
@@ -118,19 +116,21 @@ submitt.onclick = function () {
 
   body.style.display = "none";
 
-  if (mood === "create") {
-    if (datapro.name != "") {
-      pros.push(datapro);
-    } else {
-      pros[temp] = datapro;
-      mood = "create";
-      submitt.innerHTML = "create";
-    }
-    date.style.color = "red";
-    localStorage.setItem("product", JSON.stringify(pros));
+  // table
 
-    // showdata();
-  }
+  // if (mood === "create") {
+  //   if (datapro.name != "") {
+  //     pros.push(datapro);
+  //   } else {
+  //     pros[temp] = datapro;
+  //     mood = "create";
+  //     submitt.innerHTML = "create";
+  //   }
+  //   date.style.color = "red";
+  //   localStorage.setItem("product", JSON.stringify(pros));
+
+  //   showdata();
+  // }
 };
 
 // function showdata() {
