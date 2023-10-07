@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* color: white; */
+  background-color: #222;
+
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  height: 100vh;
+}
+
+.crud {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding: 10px 0px;
+  /* background-color: #222; */
+
+  /* text-transform: uppercase; */
+  /* height: 100vh; */
+}
+
+input {
+  width: 100%;
+  /* height: 30px; */
+  padding: 5px 0px;
+  outline: none;
+  border: none;
+  margin: 5px 0;
+  background-color: #111;
+  color: white;
+  transition: 0.5s;
+  border-radius: 10px;
+  padding: 20px;
+
+  margin: 25px;
+}
+.date {
+  margin-bottom: 5px;
+}
+
+#submit {
+  padding: 20px;
+  text-align: center;
+  border-radius: 50px;
+  height: 80px;
+}
+select {
+  width: 100%;
+  /* height: 30px; */
+  padding: 5px 0px;
+  outline: none;
+  border: none;
+  margin: 5px 0;
+  background-color: #111;
+  color: white;
+  transition: 0.5s;
+  border-radius: 10px;
+  padding: 20px;
+
+  margin: 25px;
+}
+
+input:hover {
+  transform: scale(1.1);
+  background: black;
+}
+button {
+  width: 100%;
+  background-color: red;
+  border: none;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: rgba(177, 8, 8, 0.76);
+  letter-spacing: 1px;
+  color: white;
+}
+
+input::placeholder {
+  text-transform: uppercase;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0px;
+}
+td,
+th {
+  padding: 5px 0px;
+  /* color: red;   */
+}
+
+.dates {
+  color: red;
+}
+
+#card {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* background-color: greenyellow; */
+  gap: 15px;
+}
+
+@media (max-width: 520px) {
+  input {
+    display: flex;
+  }
+  table th,
+  td {
+    display: flex;
+    /* flex-direction: column; */
+  }
+  #card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-color: greenyellow;
+    margin: 10px;
+  }
+}
