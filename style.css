@@ -95,7 +95,11 @@ table {
 td,
 th {
   padding: 5px 0px;
+<<<<<<< HEAD
   color: red;
+=======
+  color: blue;  
+>>>>>>> f091d233955dbea847eeab494fd1c81133693845
 }
 
 .dates {
