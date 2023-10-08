@@ -9,26 +9,26 @@ let imgs = "/image/admin-png-12.png";
 let body = document.getElementById("jk");
 let card = document.getElementById("card");
 let submitt = document.getElementById("submit");
-
+console.log(major);
 // constuctor
 
-class studant {
-  constructor(imgs, name, date, gender, phone, grade, major) {
-    this.imgs = imgs;
-    this.name = name;
-    this.date = date;
-    this.gender = gender;
-    this.phone = phone;
-    this.grade = grade;
-    this.major = major;
-  }
-  issa(...s) {
-    let kkl = [];
-    kkl.push(s);
-    console.log(kkl);
-    localStorage.setItem("product", JSON.stringify(kkl));
-  }
-}
+// class studant {
+//   constructor(imgs, name, date, gender, phone, grade, major) {
+//     this.imgs = imgs;
+//     this.name = name;
+//     this.date = date;
+//     this.gender = gender;
+//     this.phone = phone;
+//     this.grade = grade;
+//     this.major = major;
+//   }
+//   issa(...s) {
+//     let kkl = [];
+//     kkl.push(s);
+//     console.log(kkl);
+//     localStorage.setItem("product", JSON.stringify(kkl));
+//   }
+// }
 
 // table
 
@@ -55,100 +55,103 @@ submitt.onclick = function () {
 
   // construtor
 
-  let ll = new studant(
-    datapro.imgs,
-    datapro.name,
-    datapro.date,
-    datapro.gender,
-    datapro.phone,
-    datapro.grade,
-    datapro.major
-  );
-  ll.issa([
-    datapro.imgs,
-    datapro.name,
-    datapro.date,
-    datapro.gender,
-    datapro.phone,
-    datapro.grade,
-    datapro.major,
-  ]);
+  // let ll = new studant(
+  //   datapro.imgs,
+  //   datapro.name,
+  //   datapro.date,
+  //   datapro.gender,
+  //   datapro.phone,
+  //   datapro.grade,
+  //   datapro.major
+  // );
+  // ll.issa([
+  //   datapro.imgs,
+  //   datapro.name,
+  //   datapro.date,
+  //   datapro.gender,
+  //   datapro.phone,
+  //   datapro.grade,
+  //   datapro.major,
+  // ]);
 
-  let continer = document.createElement("div");
-  let cards = document.getElementById("card");
+  // let continer = document.createElement("div");
+  // let cards = document.getElementById("card");
 
-  let imgss = document.createElement("img");
-  imgss.src = imgs;
-  continer.appendChild(imgss);
-  cards.appendChild(continer);
+  // let imgss = document.createElement("img");
+  // imgss.src = imgs;
+  // continer.appendChild(imgss);
+  // cards.appendChild(continer);
 
-  imgss.style.width = "100px";
-  imgss.style.height = "100px";
-  let majors = document.createElement("div");
-  majors.innerHTML = datapro.major;
-  continer.appendChild(majors);
-  cards.appendChild(continer);
+  // imgss.style.width = "100px";
+  // imgss.style.height = "100px";
+  // let majors = document.createElement("div");
+  // majors.innerHTML = datapro.major;
+  // continer.appendChild(majors);
+  // cards.appendChild(continer);
 
-  let names = document.createElement("div");
-  names.innerHTML = datapro.name;
-  continer.appendChild(names);
-  cards.appendChild(continer);
+  // let names = document.createElement("div");
+  // names.innerHTML = datapro.name;
+  // continer.appendChild(names);
+  // cards.appendChild(continer);
 
-  let dates = document.createElement("div");
-  dates.innerHTML = datapro.date;
-  continer.appendChild(dates);
-  cards.appendChild(continer);
+  // let dates = document.createElement("div");
+  // dates.innerHTML = datapro.date;
+  // continer.appendChild(dates);
+  // cards.appendChild(continer);
 
-  let genders = document.createElement("div");
-  genders.innerHTML = datapro.gender;
-  continer.appendChild(genders);
-  cards.appendChild(continer);
+  // let genders = document.createElement("div");
+  // genders.innerHTML = datapro.gender;
+  // continer.appendChild(genders);
+  // cards.appendChild(continer);
 
-  let phones = document.createElement("div");
-  phones.innerHTML = datapro.phone;
-  continer.appendChild(phones);
-  cards.appendChild(continer);
+  // let phones = document.createElement("div");
+  // phones.innerHTML = datapro.phone;
+  // continer.appendChild(phones);
+  // cards.appendChild(continer);
 
-  let grades = document.createElement("div");
-  grades.innerHTML = datapro.grade;
-  continer.appendChild(grades);
-  cards.appendChild(continer);
+  // let grades = document.createElement("div");
+  // grades.innerHTML = datapro.grade;
+  // continer.appendChild(grades);
+  // cards.appendChild(continer);
 
-  body.style.display = "none";
+  // body.style.display = "none";
 
   // table
 
-  // if (mood === "create") {
-  //   if (datapro.name != "") {
-  //     pros.push(datapro);
-  //   } else {
-  //     pros[temp] = datapro;
-  //     mood = "create";
-  //     submitt.innerHTML = "create";
-  //   }
-  //   date.style.color = "red";
-  //   localStorage.setItem("product", JSON.stringify(pros));
+  if (mood === "create") {
+    if (datapro.name != "") {
+      pros.push(datapro);
+    } else {
+      pros[temp] = datapro;
+      mood = "create";
+      submitt.innerHTML = "create";
+    }
+    // mood.style.color = "green";
+    date.style.color = "red";
+    localStorage.setItem("product", JSON.stringify(pros));
 
-  //   showdata();
-  // }
+    showdata();
+  }
 };
 
-// function showdata() {
-//   let table = "";
-//   for (let i = 0; i < pros.length; i++) {
-//     table += `
+function showdata() {
+  let table = "";
+  for (let i = 0; i < pros.length; i++) {
+    table += `
 
-//     <tr>
-//     <td>${i}</td>
-//     <td>${pros[i].name}</td>
-//     <td  style="color: red;">${pros[i].date}</td>
-//     <td>${pros[i].gender}</td>
-//     <td>${pros[i].phone}</td>
-//     <td  style="color: red;">${pros[i].grade}</td>
-//   </tr>
-//     `;
-//   }
+    <tr>
+   
+    <td data-label="id">${i}</td>
+    <td data-label="name">${pros[i].name}</td>
+    <td  data-label="date" style="color: red;">${pros[i].date}</td>
+    <td data-label="gender">${pros[i].gender}</td>
+    <td data-label="phone">${pros[i].phone}</td>
+    <td data-label="major">${pros[i].major}</td>
+    <td data-label="grade" style="color: red;">${pros[i].grade}</td>
+  </tr>
+    `;
+  }
 
-//   document.getElementById("tbody").innerHTML = table;
-// }
-// showdata();
+  document.getElementById("tbody").innerHTML = table;
+}
+showdata();

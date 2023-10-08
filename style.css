@@ -95,7 +95,7 @@ table {
 td,
 th {
   padding: 5px 0px;
-  /* color: red;   */
+  color: red;
 }
 
 .dates {
@@ -153,11 +153,43 @@ th {
   input {
     display: flex;
   }
-  table th,
-  td {
+  /* table tr {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     justify-content: center;
+  }
+  table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  } */
+
+  table > thead {
+    display: none;
+  }
+
+  table,
+  table tbody,
+  table tr,
+  table td {
+    display: block;
+    width: 100%;
+  }
+
+  table td {
+    padding-left: 60%;
+
+    position: relative;
+  }
+  table td::before {
+    content: attr(data-label);
+    position: absolute;
+    width: 40%;
+    left: 0;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 45px;
   }
   #card {
     display: flex;
@@ -166,7 +198,6 @@ th {
     align-items: center;
     background-color: black;
     margin: 10px;
-    /* border: 2px solid red; */
   }
   #card div {
     border: 2px solid red;
