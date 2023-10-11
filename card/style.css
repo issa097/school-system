@@ -1,0 +1,91 @@
+.WelcomeContainer h2,
+h3 {
+  text-align: center;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputs input {
+  margin-right: 0.5rem;
+}
+input,
+select {
+  width: 20%;
+  height: 5%;
+}
+input:focus {
+  transform: scale(1.1);
+}
+
+#subinput0 {
+  width: 20%;
+
+  margin: 1rem auto;
+}
+#subinput0:hover {
+  letter-spacing: 2px;
+}
+
+form {
+  margin: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #050505;
+}
+
+#logo_image {
+  border: 1px solid aqua;
+  border-radius: 50%;
+}
+
+#student_card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+#student_card div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: red;
+  padding: 0.5rem;
+  border: 1px solid #050505;
+  border-radius: 0.5rem;
+}
+#student_card div img {
+  width: 100px;
+  height: 100px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+@media (max-width: 1000px) {
+  .inputs {
+    flex-direction: column;
+  }
+
+  input {
+    width: 70%;
+    height: 10%;
+    margin-bottom: 5px;
+  }
+  input,
+  select {
+    width: 71%;
+    height: 10%;
+    margin-bottom: 5px;
+  }
+
+  #student_card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
